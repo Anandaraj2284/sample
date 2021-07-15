@@ -1,0 +1,17 @@
+- name: File deployments
+  # You may pin to the exact commit or the version.
+  # uses: 49nord/action-files@fcafc8f5ff59c9d85a333d11e7bf77a0fa0ba931
+  uses: 49nord/action-files@v1
+  with:
+    # The local path that should be uploaded. Should end with a slash.
+    src: 
+    # The remote location to sync to, e.g. `user@host:/path/to/dest/`. Should end with a slash.
+    dest: 
+    # SSH private key to add before attempting any transfer.
+    ssh_key: 
+    # SSH known hosts file.
+    known_hosts: 
+    # Arguments passed to `rsync`. The defaults should cover most usecases.
+    rsync_args: # optional, default is --delete -avz
+    # Argments passed to `rsyncs` SSH invocation, e.g. to pass a custom port use `-p 12345`.
+    ssh_args: # optional
