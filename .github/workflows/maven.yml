@@ -10,8 +10,7 @@ on:
     branches: [ main ]
 env:
   AZURE_WEBAPP_NAME: anandpoc  # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: ${{ github.workspace }} # set this to the path to your web app project
-  JAVA_VERSION: '1.8'                # set this to the Java version to use
+  AZURE_WEBAPP_PACKAGE_PATH: ${{ github.workspace }} # set this to the path to your web app project               # set this to the Java version to use
   AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}     # set GH repo secret with the publish profile of the web app
 
 jobs:
@@ -37,4 +36,4 @@ jobs:
       with: 
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ env.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/target/*.jar'
+        package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/target/Sample-1.0.0-shaded.jar'
